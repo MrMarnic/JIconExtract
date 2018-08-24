@@ -22,7 +22,7 @@ JNA 4.5.2
 JNA-Platform 4.5.2
 
 # Downloads:
-<a href="https://www.dropbox.com/s/gob454p2xct3eaz/JIconExtract.jar?dl=1/">JIconExtract.jar</a>
+<a href="https://github.com/MrMarnic/JIconExtract/releases/download/1.0/JIconExtract.jar/">JIconExtract.jar</a>
 
 
 
