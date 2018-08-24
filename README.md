@@ -11,6 +11,12 @@ It is an good alternative for Shellfolder which only provides 16x16 and 32x32 si
 
 BufferedImage image = JIconExtractor.getJIconExtractor().extractIconFromFile("*.txt",IconSize.JUMBO);
 
+# Supported Sizes
+SMALL: 16x16
+LARGE: 32x32
+EXTRALARGE: 48x48
+JUMBO: 256x256
+
 # Requirements:
 JNA 4.5.2
 JNA-Platform 4.5.2
