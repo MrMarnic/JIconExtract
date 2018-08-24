@@ -7,7 +7,7 @@ import me.marnic.jiconextract.extractor.IconSize;
 import java.awt.image.BufferedImage;
 
 public class HICONConverter {
-    public static BufferedImage convertHICONToImage(final int size, final WinNT.HANDLE hicon) {
+    public BufferedImage convertHICONToImage(final int size, final WinNT.HANDLE hicon) {
         final WinGDI.ICONINFO iconinfo = new WinGDI.ICONINFO();
 
         try {
