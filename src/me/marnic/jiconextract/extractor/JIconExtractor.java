@@ -29,10 +29,10 @@ public class JIconExtractor {
         if(size==IconSize.SMALL) {
             ICON_SIZE = SHIL.SMALL;
             sizeS = 16;
-        }if(size==IconSize.LARGE) {
+        }else if(size==IconSize.LARGE) {
             ICON_SIZE = SHIL.LARGE;
             sizeS = 32;
-        }if(size==IconSize.EXTRALARGE) {
+        }else if(size==IconSize.EXTRALARGE) {
             ICON_SIZE = SHIL.EXTRALARGE;
             sizeS = 48;
         }else{
