@@ -22,32 +22,37 @@ public class JIconExtractor {
         return new JIconExtractor();
     }
 
-    public BufferedImage extractIconFromFile(File file,IconSize size) {
+    public BufferedImage extractIconFromFile(String file,IconSize size) {
         int ICON_SIZE;
+        int sizeS;
 
         if(size==IconSize.SMALL) {
             ICON_SIZE = SHIL.SMALL;
+            sizeS = 16;
         }if(size==IconSize.LARGE) {
             ICON_SIZE = SHIL.LARGE;
+            sizeS = 32;
         }if(size==IconSize.EXTRALARGE) {
             ICON_SIZE = SHIL.EXTRALARGE;
+            sizeS = 48;
         }else{
             ICON_SIZE = SHIL.JUMBO;
+            sizeS = 256;
         }
 
-        int index = getIconIndex(file.getPath());
+        int index = getIconIndex(file);
 
         WinDef.HICON hIcon = getHIcon(index,ICON_SIZE);
 
-        BufferedImage image = CONVERTER.convertHICONToImage(ICON_SIZE,hIcon);
+        BufferedImage image = CONVERTER.convertHICONToImage(sizeS,hIcon);
 
         User32.INSTANCE.DestroyIcon(hIcon);
 
         return image;
     }
 
-    public BufferedImage extractIconFromFile(String path,IconSize size) {
-        return extractIconFromFile(new File(path),size);
+    public BufferedImage extractIconFromFile(File path,IconSize size) {
+        return extractIconFromFile(path.getPath(),size);
     }
 
     private int getIconIndex(String file) {
