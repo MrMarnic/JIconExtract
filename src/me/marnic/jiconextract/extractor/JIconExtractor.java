@@ -39,7 +39,7 @@ public class JIconExtractor {
 
         WinDef.HICON hIcon = getHIcon(index,ICON_SIZE);
 
-        BufferedImage image = CONVERTER.convertHICONToImage(hIcon,size);
+        BufferedImage image = CONVERTER.convertHICONToImage(ICON_SIZE,hIcon);
 
         User32.INSTANCE.DestroyIcon(hIcon);
 
